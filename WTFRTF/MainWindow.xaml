@@ -1,0 +1,38 @@
+﻿<Window x:Class="WTFRTF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WTFRTF"
+        mc:Ignorable="d"
+        Title="WTFRTF" Height="459" Width="727">
+    <Grid>
+        <RichTextBox x:Name="SourceRichTextBox" HorizontalAlignment="Left" Margin="10,43,0,10" Width="246">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Hello"/>
+                </Paragraph>
+                <Paragraph>
+                    <Run FontWeight="Bold" Text="There"/>
+                </Paragraph>
+                <Paragraph>
+                    <Run FontWeight="Bold" FontStyle="Italic" Text="Bold Italic"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button x:Name="AsPlainTextButton" Content="--&gt; As Plain Text --&gt;" HorizontalAlignment="Left" Margin="271,43,0,0" VerticalAlignment="Top" Width="171" Click="AsPlainTextButton_Click"/>
+        <Button x:Name="AsRTFButton" Content="--&gt; As RTF --&gt;" HorizontalAlignment="Left" Margin="271,81,0,0" VerticalAlignment="Top" Width="171" Click="AsRTFButton_Click"/>
+        <RichTextBox x:Name="TargetRichTextBox" Margin="463,43,10,10">
+            <FlowDocument>
+                <Paragraph>
+                    <Run/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <CheckBox x:Name="AsBase64CheckBox" Content="As Base64" HorizontalAlignment="Left" Margin="271,120,0,0" VerticalAlignment="Top" Width="171"/>
+        <Button x:Name="CopyTargetToClipboardButton" Content="Copy Target to Clipboard" HorizontalAlignment="Left" Margin="271,384,0,0" VerticalAlignment="Top" Width="171" Click="CopyTargetToClipboardButton_Click"/>
+        <Label x:Name="label" Content="Source" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" Width="70"/>
+        <Label x:Name="label1" Content="Target" HorizontalAlignment="Left" Margin="463,17,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
